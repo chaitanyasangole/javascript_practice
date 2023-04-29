@@ -1,0 +1,44 @@
+<html>
+    <head></head>
+    <body>
+        <ul id="list"><li>Apple</li><li>Orange</li><li>Mango</li><li>Banana</li></ul>
+        <p id="par"><a>link</a><p>hello</p></p>
+
+        <ul id="list2">
+            <li>Apple</li>
+            <li>Orange</li>
+            <li>Mango</li>
+            <li>Banana</li>
+        </ul>
+        <p id="par2"><a>link</a><p>hello</p></p>
+        <script>
+            let bdy=document.getElementById('list');
+            console.log('<br>first element'+bdy.firstChild.innerHTML );
+            console.log('<br>first element'+bdy.lastChild.innerHTML );
+            console.log('<br>first element'+Array.from(bdy.childNodes) );
+            let Arra=Array.from(bdy.childNodes);
+            for(let i=0; i<bdy.childNodes.length;i++)
+            {
+                console.log((i+1)+'element '+Arra[i].innerHTML);
+            }
+            let p=document.getElementById('par');
+            console.log('<br>first element'+p.firstChild.innerHTML );
+            console.log('<br>second element'+p.lastChild.innerHTML );
+
+            let bdy2=document.getElementById('list2');
+            console.log('<br>in list method2');
+            console.log('<br>first element'+bdy.firstChild.innerHTML );
+            console.log('<br>second element'+bdy.lastChild.innerHTML );
+            console.log('<br>all element'+Array.from(bdy.children) );
+            let Arr2=Array.from(bdy.children);
+            for(let i=0; i<bdy.children.length;i++)
+            {
+                console.log((i+1)+'element '+Arra[i].innerHTML);
+            }
+            console.log('<br>in par method2');
+            let par2=document.getElementById('par2');
+            console.log('<br>first element'+par2.firstChild.innerHTML );
+            console.log('<br>second element'+par2.lastChild.innerHTML );
+        </script>
+    </body>
+</html>

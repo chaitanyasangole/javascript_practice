@@ -1,0 +1,38 @@
+<html>
+    <!-- 
+        previousElementSibling- return previous element sibling
+        nextElementSibling- return next element sibling
+        parentNode -The parentNode property returns the parent node of an element or node.
+        parentElement- The parentElement property returns the parent element of the specified element.
+    -->
+    <head>This is a head
+        <title>title</title>
+    </head>
+    <body>
+        <p id="list"> This is s a paragraph</p>
+        <a id="test">LINK</a>
+        This is a body
+        <script>
+            console.log('previous='+document.body.previousElementSibling.innerHTML);
+            console.log('next='+document.body.nextElementSibling);
+            console.log('previous='+document.head.previousElementSibling);
+            console.log('next='+document.head.nextElementSibling.innerHTML);
+
+            console.log('previous='+document.head.previousElementSibling);
+            console.log('next='+document.head.nextElementSibling.innerHTML);
+            
+            console.log('previous='+document.head.previousElementSibling);
+            console.log('next='+document.head.nextElementSibling.innerHTML);
+
+            let test=document.getElementById('test');
+            let list=document.getElementById('list');
+
+            //console.log('title='+document.head.title.innerHTML);
+            console.log('test='+test.innerHTML);
+            console.log('list='+list.innerHTML);
+
+            console.log('test parent node='+test.parentNode.innerHTML);
+            console.log('list parent element='+list.parentElement.innerHTML);
+        </script>
+    </body>
+</html>

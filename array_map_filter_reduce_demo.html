@@ -1,0 +1,43 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+        // return new array 
+        //array map used to perform operation on array
+        //array filter used to perform filter operation on array
+        //array reduce used to return one value
+
+        let str=[4002,45,65,87,98,43,12,2354];
+        document.write('array demo'+str);
+        document.write('<br>map demo');
+        const arr2=str.map((
+        key,index,
+        ele)=>
+            {
+                // document.write('<br>key='+key+', index='+ index+', ele='+ele);
+                return key+index;
+            }
+        );
+
+        document.write('<br><br>array filter demo'+arr2+'<br>');
+        const arr3=str.filter((key,index,ele)=>
+            {
+                document.write('<br>key='+key+', index='+ index+', ele='+ele);
+
+                if(key % 2==0)
+                return key;
+            }
+        );
+        document.write('<br><br>array2 demo='+arr3);
+        document.write('<br><br>array reduce demo');
+        const arr4=str.reduce((a1,a2)=>
+            {
+                return a1-a2;
+            }
+        );
+        document.write('<br><br>array3 demo='+arr4);
+        document.write('<br><br>original demo='+str);
+
+        </script>
+    </body>
+</html>

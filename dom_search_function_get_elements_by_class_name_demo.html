@@ -1,0 +1,46 @@
+<html>
+
+<!-- 
+Note : while you are using document.getElementsByClassName select all
+elements containing class name. So, give class name to only those elements 
+which you want to select.
+-->
+    <head></head>
+    <body>
+        <div class="fruits">
+            <p>fruit 1</p>
+        </div>
+        <div class="fruits">
+            <p>fruit 2</p>
+        </div>
+        <div class="fruits">
+            <p>fruit 3</p>
+        </div>
+        <div class="fruits stop">
+            <p>fruit stop1</p>
+        </div>
+        <div class="fruits stop">
+            <p>fruit stop2</p>
+        </div>
+        <script>
+            let collectionList=document.getElementsByClassName('fruits');
+            let collectionList2=document.getElementsByClassName('fruits stop');
+            var fruitsArr=Array.from(collectionList);
+            var fruitsArr2=Array.from(collectionList2);
+            document.write('<br>fruits arr');
+            for(let i=0;i< fruitsArr.length ;i++)
+            {
+                document.write('<br>element='+fruitsArr[i].firstElementChild.innerHTML);
+                fruitsArr[i].firstElementChild.style.color="red";
+            }
+            document.write('<br>fruits arr2');
+            for(let i=0;i< fruitsArr2.length ;i++)
+            {
+                document.write('<br>element='+fruitsArr2[i].firstElementChild.innerHTML);
+                fruitsArr2[i].firstElementChild.style.color="blue";
+            }
+            // document.write('collectionList='+collectionList+' type of collectionList'+collectionList);
+            // document.write('collectionList='+collectionList+' type of collectionList'+collectionList);
+        </script>
+    </body>
+</html>

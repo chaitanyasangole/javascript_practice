@@ -1,0 +1,33 @@
+<html>
+    <head></head>
+    <body>
+        <div id="hello">    
+        <!-- comment node -->
+            <ul id="list">
+                <li>mango</li>
+                <li>apple</li>
+            </ul>
+        </div>
+        <div id="hello2">
+            <!-- comment node -->
+            <ul id="list2">
+                <li>India</li>
+                <li>US</li>
+            </ul>
+            <ul id="list3">
+                <li>dog</li>
+                <li>cat</li>
+            </ul>
+        </div>
+        <script>
+            let list=document.getElementById('list');
+            let list2=document.getElementById('list2');
+
+            console.log('list'+list);
+            console.log('parentNode'+list.parentNode);
+            
+            console.log('list'+list2);
+            console.log('parentElement'+list2.parentElement);
+        </script>
+    </body>
+</html>

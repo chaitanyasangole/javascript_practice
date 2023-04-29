@@ -1,0 +1,33 @@
+<html>
+    <head></head>
+    <body>
+        <div id="hello">    
+        <!-- comment node -->
+            <ul id="list">
+                <li>mango</li>
+                <li>apple</li>
+            </ul>
+        </div>
+        <div id="hello2">
+            <!-- comment node -->
+            <ul id="list2">
+                <li>India</li>
+                <li>US</li>
+            </ul>
+            <ul id="list3">
+                <li>dog</li>
+                <li>cat</li>
+            </ul>
+        </div>
+        <script>
+            let list=document.getElementById('list');
+            let list2=document.getElementById('list2');
+
+            console.log('list'+list);
+            console.log('nextElementSibling'+list.nextElementSibling);
+            console.log('nextSibling'+list.nextSibling);
+            
+            console.log('list'+list2);
+            console.log('previousElementSibling'+list2.previousElementSibling);
+            console.log('previousSibling'+list2.previousSibling);
+        </script>

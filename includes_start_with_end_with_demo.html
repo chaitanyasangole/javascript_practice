@@ -1,0 +1,45 @@
+<html>
+
+<head>
+</head>
+
+<body>
+  <script>
+    let string2 = prompt("Enter a string");
+
+    let string3 = prompt("Enter a includes");
+    let string4 = prompt("Enter a startswith");
+    let string5 = prompt("Enter a enterswith");
+
+    if (string2.includes(string3)) 
+    {
+      document.write(string2+' includes '+string3);
+    }
+    else 
+    {
+      document.write(string2+' not includes '+string3);
+    }
+
+    if (string2.startsWith(string4)) 
+    {
+      document.write('<br>'+string2+' startWith '+string4);
+    }
+    else 
+    {
+      document.write('<br>'+string2+' not startWith '+string4);
+    }
+
+    
+    if (string2.endsWith(string5)) 
+    {
+      document.write('<br>'+string2+' endsWith '+string5);
+    }
+    else 
+    {
+      document.write('<br>'+string2+' not endsWith '+string5);
+    }
+    
+  </script>
+</body>
+
+</html>
