@@ -1,0 +1,66 @@
+<html>
+    <head></head>
+    <body>
+        <input type="hidden" name="hdnperson" value="hdnperson">
+        <input type="text" name="person" value="cs"><br>
+        <input type="number" name="mobile" value="781212121"><br>
+        <input type="email" name="email" value="cs@gmail.com"><br>
+        <input type="date" name="dob" value="2023-02-12"><br>
+
+        <input type="checkbox" name="dance" value="dance">dance
+        <input type="checkbox" name="paint" value="paint">paint
+        <input type="checkbox" name="sing" value="singing">singing
+        <br>
+        <input type="radio" name="gender" value="male" checked>Male
+        <input type="radio" name="gender" value="female">Female
+        <br><label>country:</label>
+        <select id="country" name="country">
+            <option value="india" selected>india</option>
+            <option value="us">us</option>
+        </select>
+        <br>
+        <script>
+            var email=document.getElementsByName('email');
+            document.write('<br>email='+document.getElementsByName('email')[0].value+' -  type of email='+typeof document.getElementsByName('email'));
+            var person=document.getElementsByName('person');
+            document.write('<br>person='+document.getElementsByName('person')[0].value+' -  type of person='+typeof document.getElementsByName('person'));
+            var dob=document.getElementsByName('dob');
+            document.write('<br>dob='+document.getElementsByName('dob')[0].value+' -  type of dob='+typeof document.getElementsByName('dob'));
+
+            document.write('<br>mobile='+document.getElementsByName('mobile')[0].value+' -  type of mobile='+typeof document.getElementsByName('mobile'));
+
+            document.write('<br>gender1='+document.getElementsByName('gender')[0].value+' -  type of gender1='+typeof document.getElementsByName('gender'));
+            document.write('<br>gender2='+document.getElementsByName('gender')[1].value+' -  type of gender2='+typeof document.getElementsByName('gender'));                                                                                                                                                                                                                                                                                                                                           
+            document.write('<br>person='+document.getElementsByName('hdnperson')[0].value+' -  type of person='+typeof document.getElementsByName('hdnperson'));
+            var dob=document.getElementsByName('dob');
+            document.write('<br>country='+document.getElementsByName('country')[0].value+' -  type of country='+typeof document.getElementsByName('country'));
+            
+            printRadios(document.getElementsByName('gender'));
+
+            function printRadios(collection)
+            {
+                document.write('<br>collection'+collection+' -  type of collection='+typeof collection);
+                document.write('<br>collection length='+collection.length);
+
+                collection.forEach((gender) => {
+                    document.write('<br>collection value='+gender.value);
+                    if (gender.checked) 
+                    {
+                        document.write(' checked<br>');
+                    }
+                    else
+                    {
+                        document.write(' not checked<br>');
+                    }
+                });
+            }
+                
+            // for (let i = 0; i < collection.length; i++) 
+            // {
+            //     if (collection[i].type == "checkbox") {
+            //         collection[i].checked = true;
+            //     }
+            // }
+        </script>
+    </body>
+</html>
