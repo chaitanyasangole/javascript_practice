@@ -1,0 +1,39 @@
+<html>
+    <head></head>
+    <body>
+        <h1>heading 1</h1>
+        <h2>heading 2</h2>
+        <p>paragraph</p>
+        <h4>heading 1</h4>
+        <h5>heading 2</h5>
+        <a>paragraph</a>
+        <script>
+          var h1=document.getElementsByTagName('h1');  
+          var h2=document.getElementsByTagName('h2');  
+          var p=document.getElementsByTagName('p');  
+          var h4=document.getElementsByTagName('h4');  
+          var h5=document.getElementsByTagName('h5');  
+          var a=document.getElementsByTagName('a');  
+          console.log('h1'+h1[0].innerHTML);
+          console.log('h2'+h2[0].innerHTML);
+          console.log('p'+p[0].innerHTML);
+          console.log('h1'+h1[0].outerHTML);
+          console.log('h2'+h2[0].outerHTML);
+          console.log('p'+p[0].outerHTML);
+
+          h1[0].innerHTML='head1';
+          h2[0].innerHTML='head2';
+          p[0].innerHTML='para';
+          h4[0].outerHTML='head4';
+          h5[0].outerHTML='head5';
+          a[0].outerHTML='anchor';
+          console.log('h1 get='+h1[0].innerHTML);
+          console.log('h2 get='+h2[0].innerHTML);
+          console.log('p get='+p[0].innerHTML);
+          //not working
+          //console.log('h4'+h4[0].outerHTML);
+          //console.log('h5'+h5[0].outerHTML);
+        //   /console.log('a'+a[0].outerHTML);
+        </script>
+    </body>
+</html>

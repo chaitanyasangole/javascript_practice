@@ -1,0 +1,53 @@
+<html>
+    <head></head>
+    <body>
+        <!-- comment node -->
+        <ul id="ulist">
+
+            <li>mango</li>
+
+            <li>apple</li>
+
+            <li>banana</li>
+
+        </ul>
+        <p id="test" name="cs">
+            hello
+        </p>
+        <script>
+            // let ul=document.getElementById('ulist');
+            // //getElementsByTagName('ulist');
+            // let childrenArr=Array.from(ul.children);
+            // console.dir(childrenArr);
+            // for(let j=0;j<childrenArr.length;j++)
+            // {
+            //     document.write('tagName='.childrenArr.tagName);
+            //     document.write('tagName='.childrenArr.nodeName);
+            // }
+            
+            let childN=Array.from(document.body.childNodes);
+            for(let j=0;j<childN.length;j++)
+            {
+                document.write('<br>nodeName='+childN[j].nodeName);
+                document.write(',tagName='+childN[j].tagName);
+            }
+
+            let Ps=document.getElementById('test');
+           // console.log('tagname='.ul.tagName);
+            console.dir('nodeName='+Ps.nodeName);
+            console.dir('nodeName='+Ps.tagName);
+            let ul=document.getElementById('ulist');
+           // console.log('tagname='.ul.tagName);
+            console.dir('nodeName='+ul.nodeName);
+            console.dir('nodeName='+ul.tagName);
+            let childrenArr=Array.from(ul.children);
+            console.dir(childrenArr);
+            for(let j=0;j<childrenArr.length;j++)
+            {
+                document.write('<br>nodeName='+childrenArr[j].nodeName);
+                document.write('value='+childrenArr[j].innerHTML);
+                document.write('tagName='+childrenArr[j].tagName);
+            }
+        </script>
+    </body>
+</html>
