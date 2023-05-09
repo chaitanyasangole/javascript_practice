@@ -1,0 +1,28 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text" name="first" id="first" class="active cs" data-game="chess" value="hello">
+        <script>
+            // get ,set remove
+            let first=document.getElementById('first');
+            document.write('<br>class get='+first.getAttribute('class'));
+            document.write('<br>class set');
+            first.setAttribute('class','none display');
+            document.write('<br>class get='+first.getAttribute('class'));
+            first.removeAttribute('class');// remove the attribute
+
+            document.write('<br>custom data set game='+first.dataset.game);//custom data set value get 
+            // check attribute is present or not
+            document.write('<br>check class attribute is present='+first.hasAttribute('class'));
+            document.write('<br><br>check data-game attribute is present='+first.hasAttribute('data-game'));
+            document.write('<br>attribute list'+first.attributes);
+            document.write('<br><br>Attribute List'+first.attributes);
+            let AttributeList=Array.from(first.attributes);
+            document.write('<br>');
+            for(let j=0;j<AttributeList.length;j++)
+            {
+                document.write('<br>'+AttributeList[j].nodeName+" "+AttributeList[j].nodeValue);
+            }
+        </script>
+    </body>
+</html>

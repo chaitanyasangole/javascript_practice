@@ -1,0 +1,20 @@
+<html>
+    <head></head>
+    <body>
+        <div id="first">First HTML</div>
+        <div id="second">second HTML <div id="third">third HTML</div></div>
+        <script>
+            first.insertAdjacentHTML('beforebegin',"<div>before begin</div>");
+            first.insertAdjacentHTML('beforeend',"<div>before end</div>");
+            first.insertAdjacentHTML('afterbegin',"<div>after begin</div>");
+            first.insertAdjacentHTML('afterend',"<div>after end</div>");
+            first.insertAdjacentHTML('beforebegin',"<div>before begin2</div>");
+            first.insertAdjacentHTML('beforeend',"<div>before end2</div>");
+            first.insertAdjacentHTML('afterbegin',"<div>after begin2</div>");
+            first.insertAdjacentHTML('afterend',"<div>after end2</div>");
+            let third=document.getElementById('third');
+            third.remove();
+        </script>
+
+    </body>
+</html>

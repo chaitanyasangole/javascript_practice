@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <style>
+            .yellow
+            {
+                background-color:yellow;    
+            }
+            .red
+            {
+                background-color:red;    
+            }
+            .text-dark
+            {
+                color:black;    
+            }
+            .skyblue
+            {
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="first" class="active show">
+            div text !!!
+        </div>
+        <script>
+            let first=document.getElementById('first');
+            document.write('<br>class='+first.getAttribute('class'));
+            first.className='red text-dark';
+            document.write('<br>class=adding class red text-dark');
+            document.write('<br>attribute class='+first.getAttribute('class'));
+            first.classList.remove("red");
+            document.write('<br>class=remove red ');
+            document.write('<br>attribute class='+first.getAttribute('class'));
+            first.classList.toggle("yellow");// add a class
+            document.write('<br>add yellow class using toggle');
+            document.write('<br>attribute class='+first.getAttribute('class'));
+            first.classList.toggle("yellow");// add a class
+            document.write('<br>remove yellow class using toggle');
+            document.write('<br>attribute class='+first.getAttribute('class'));
+            first.classList.add('skyblue');
+            document.write('<br>attribute class='+first.getAttribute('class'));
+        </script>
+    </body>
+</html>
