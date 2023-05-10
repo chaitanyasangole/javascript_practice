@@ -1,0 +1,17 @@
+<html>
+    <head></head>
+    <body>
+
+        <script>
+            let timeout='';
+            let hello=()=>
+            {
+               let choice= prompt('enter a choice yes/ no');
+               if(choice=='no')
+               clearInterval(timeout);
+            };
+
+            timeout=setInterval(hello,2000);
+        </script>
+    </body>
+</html>
