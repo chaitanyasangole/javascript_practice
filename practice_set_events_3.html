@@ -1,0 +1,28 @@
+<html>
+    <body>
+        
+        <button id="google">Google</button>
+        <br>
+        <button id="facebook">Facebook</button>
+        <br>
+        <button id="twitter">Twitter</button>
+        
+        <script>
+            let g=document.getElementById('google');
+            let f=document.getElementById('facebook');
+            let t=document.getElementById('twitter');
+            g.addEventListener('click',function()
+            {
+                window.location.href='https://google.com';
+            });
+            f.addEventListener('click',function()
+            {
+                window.location.href='https://facebook.com';
+            });
+            t.addEventListener('click',function()
+            {
+                window.location.href='https://twitter.com';
+            });
+        </script>
+    </body>
+</html>
