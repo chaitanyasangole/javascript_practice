@@ -1,0 +1,85 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Heading 1</h1>
+        <h1>Heading 2</h1>
+        <h1>Heading 3</h1>
+        <h1>Heading 4</h1>
+        <script>
+            let p1=new Promise((resolve,reject)=>{
+              setTimeout(()=>{
+                resolve(51);
+                document.write('p1 resolve<br>');
+              },4000);  
+            });
+            let p2=new Promise((resolve,reject)=>{
+              setTimeout(()=>{
+                //resolve(12);
+                reject(new Error('hello error'));
+                document.write('p2 resolve<br>');
+              },2000);  
+            });
+            let p3=new Promise((resolve,reject)=>{
+              setTimeout(()=>{
+                document.write('p3 resolve<br>');
+                resolve(564);
+              },3000);  
+            });
+            // note : It will run then if we resolve/ reject the promise
+            // all() will take all resolved promises. It will return if all resolved promises array otherwise it won't return .
+            // allSettled() will take all promises.Includes rejected.
+            // race() will take first promise. If it is resolved then then block will be executed.otherwise not.
+            // any() will take first resolve promise. If no any promise is resolved then it will hrow aggregate error.
+            //let j1=Promise.all([p1,p2,p3]);
+            let j1=Promise. allSettled([p1,p2,p3]);
+
+            j1.then((value)=>
+            {
+              console.log(value);
+              console.log(value+' type of='+typeof+'');
+              value.forEach((element, index, array) => {
+                  console.log('status='+element.status+'\n'); // 100, 200, 300
+                  if(element.status=='rejected')
+                  {
+                    console.log('reason='+element.reason+'\n'); // 0, 1, 2
+                  }
+                  else if(element.status=='fulfilled')
+                  {
+                    console.log('value='+element.value+'\n'); // 0, 1, 2
+                  }
+                  // console.log(index); // 0, 1, 2
+                  // console.log(array); // same myArray object 3 times
+              });
+            }).catch((error)=>
+            {
+              console.log(error);
+            });
+            //let j2=Promise.race([p1,p2,p3]);
+            let j2=Promise.any([p1,p2,p3]);
+            j2.then((value)=>
+            {
+              console.log(value+' type of='+typeof+'');
+            }).catch((error)=>
+            {
+              console.log(error);
+            });
+            let j3=Promise.resolve(1235);
+            j3.then((value)=>
+            {
+              console.log(value);
+            }).catch((error)=>
+            {
+              console.log(error);
+            });
+            let j4=Promise.reject(new Error('error found'));
+            j4.then((value)=>
+            {
+              console.log(value);
+            })
+            .catch((error)=>
+            {
+              console.log(error);
+            });
+        </script>
+    </body>
+</html>
