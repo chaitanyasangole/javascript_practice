@@ -1,0 +1,55 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            async function hello()
+            {
+                //console.log('hello promise');
+                return 7;    
+            }
+            hello().then((value)=>{
+                alert('value'+value);
+            });
+            // let p1=new Promise((resolve, reject)=>{
+            //     setTimeout(()=>{
+            //         resolve(12);
+            //     },3000);
+            // });
+   
+            // let p2=new Promise((resolve, reject)=>{
+            //     setTimeout(()=>{
+            //         resolve(84);
+            //     },6000);
+            // });
+
+            async function go()
+            {    
+                let p3=new Promise((resolve, reject)=>{
+                    setTimeout(()=>{
+                        resolve(12);
+                    },3000);
+                });
+
+                let p4=new Promise((resolve, reject)=>{
+                    setTimeout(()=>{
+                        resolve(84);
+                    },1000);
+                });
+                // p3.then(alert);
+                // p4.then(alert);
+                console.log('p3 fetch start');
+                let p33=await p3;
+                console.log('p3 fetched p33='+p33);
+                console.log('p4 fetch start');
+                let p44=await p4;
+                console.log('p4 fetched p44='+p44);
+                return [p33,p44];
+            }
+
+            go().then((value)=>
+            {
+                alert('val='+value);
+            });
+        </script>
+    </body>
+</html>
