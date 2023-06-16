@@ -1,0 +1,35 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            /*
+            local, global, function scope demo
+            */
+            let a=12;
+            
+            demo();
+
+            function demo()
+            {
+                document.write('<br>global variable accessible inside function a='+a);
+            }
+            
+            //student(); //won't work
+
+            var student=()=>
+            {
+                let z=23;
+                document.write('<br>global variable accessible inside function a='+a);
+            }
+            student();// will work
+            //document.write('<br>local variable='+z); global variable not accessible outside.
+            document.write('<br>print p');
+            for(let p=1; p<=10;p++)
+            {
+                document.write(p+'<br>');
+            }
+            document.write('<br>p='+p);// p is not accessible outside
+
+        </script>
+    </body>
+</html>
